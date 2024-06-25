@@ -1,3 +1,5 @@
 service : {
     "greet": (text, int8) -> (text) query;
+    "dodaj_wpisy": (text) -> ();
+    "odczytaj_wpisy": () -> (vec text) query;
 }
