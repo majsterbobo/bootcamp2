@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { dzien2_backend } from 'declarations/dzien2_backend/index';
-import blog from 'dzien2_frontend/components/blog.vue';
+import blog from './components/blog.vue';
 
 let greeting = ref('');
 

@@ -4,7 +4,7 @@
         siema blog!
         {{ wpisy }}
         <input v-model="nowyBlog" type="text">
-        <button @click="dodaj_wpisy">dodaj</button>
+        <button @click="dodajWpisy">dodaj</button>
 
     </div>
 </template>
@@ -16,13 +16,13 @@ export default{
     data(){
         return {
             wpisy: [],
-            nowyBlog = ""
+            nowyBlog: ""
         }
     },
 methods: {
     async dodajWpisy(){
-        await dzien2_backend.dodaj_wpisy(this.nowyBlog)
-    }
+        await dzien2_backend.dodaj_wpis(this.nowyBlog)
+    },
     async pobierzWpisy(){
         this.wpisy = await dzien2_backend.odczytaj_wpisy()
     }
